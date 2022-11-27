@@ -1,0 +1,29 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.3'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id "io.freefair.lombok" version "6.1.0"
+    id 'java'
+}
+
+group = 'com.tsingle'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.4'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.5.4'
+    implementation 'io.jsonwebtoken:jjwt:0.9.1'
+    implementation 'io.github.openfeign:feign-jackson:11.5'
+    implementation 'io.github.openfeign:feign-okhttp:11.5'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:3.0.3'
+    runtimeOnly 'mysql:mysql-connector-java:8.0.25'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.4'
+}
+
+test {
+    useJUnitPlatform()
+}

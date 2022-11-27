@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="搜索"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <Spinner
+                android:layout_marginLeft="30dp"
+                android:id="@+id/spin_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/course"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:spinnerMode="dialog"
+                android:textAlignment="center" />
+
+            <Spinner
+                android:id="@+id/spin_sorter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/sorters"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:spinnerMode="dialog"
+                android:textAlignment="center" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_gravity="right|end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:queryHint="@string/query_hint"
+                android:theme="@style/SearchViewStyle"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
